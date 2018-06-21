@@ -255,7 +255,7 @@ globalkeys = gears.table.join(
     awful.key({}, "#105", function() awful.util.spawn_with_shell("sleep 0.5 && scrot -s -e 'mv $f ~/Pictures/shots/'") end),
 
     -- Locks screen with `xscreensaver`
-    awful.key({ modkey,   "Shift" }, "`", function () awful.util.spawn("xscreensaver-command -lock") end),
+    awful.key({ modkey,   "Shift" }, ".", function () awful.util.spawn("xscreensaver-command -lock") end),
     
     
 
@@ -596,6 +596,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 --{{run on startup
 -- THIS CAUSES CRASH IDK WHY: https://bugs.launchpad.net/ubuntu/+source/awesome/+bug/1176862 <-> awful.util.spawn("autokey")
 os.execute("autokey &")
-
+os.execute("xscreensaver &")
 
 --}}
