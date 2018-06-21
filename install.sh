@@ -7,4 +7,4 @@ mv /arc/ /usr/share/icons
 cd ~/.config/awesome
 git clone https://github.com/streetturtle/awesome-wm-widgets.git
 pwd
-echo "The Palace has been built."
+echo "your awesome is now configured."
