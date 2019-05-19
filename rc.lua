@@ -193,10 +193,10 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    local names = { "top", "学", "笔记", "dev", "6", "7", "8", "9"}
+    local names = { "top", "学", "笔记", "dev", "Ψ", "❉", "❆", "ω", "攀"}
     local l = awful.layout.suit  -- Just to save some typing: use an alias.
-    local layouts = { l.tile.top, l.tile, l.floating, l.fair, l.max,
-    l.floating, l.tile.left, l.floating, l.floating }
+    local layouts = { l.tile.top, l.tile, l.tile, l.fair, l.max,
+    l.tile.top, l.tile.left, l.floating, l.floating }
     awful.tag(names, s, layouts)
 
     -- Create a promptbox for each screen
@@ -274,8 +274,8 @@ globalkeys = gears.table.join(
               {description = "view previous", group = "tag"}),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
               {description = "view next", group = "tag"}),
-    awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
-              {description = "go back", group = "tag"}),
+   -- awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
+   --           {description = "go back", group = "tag"}),
 
     awful.key({ modkey,           }, "j",
         function ()
